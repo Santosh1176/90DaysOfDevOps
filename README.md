@@ -1,5 +1,5 @@
 This repository records my journey of learning various DevOPs concepts. I started this journey on 1st October 2022 and am intending to 
-conclude this by 31st December 2023, which would be approximately 90 Days from the start of this learning journey.
+conclude this by 31st December 2023, which would be approximately 90 Days from the start of this learning journey. I intend to update this repo on daily basis with all that I learned with the resources I used. I shall be mainly using` the free resources available in public domain.
 
 The motivation for undergoing this exercise is inspired by [@michaelcade's](https://twitter.com/michaelcade1) journey where he has recorded all his learning in hos [Git Repository](https://github.com/michaelcade/90DaysOfDevOPs) and the main reason for me doing this is to fill the knowledge gaps I have in the field of DevOps, learn them and share in public of my learning in the course of this timeframe.
 
