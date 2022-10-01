@@ -1,6 +1,8 @@
 ## Linux Networking
 
-The command `ifcongig` is used to display all the networking interface configured on any Linux system. This command details both IPV4 and IPV6 IP address, all the details of the packets transmitted and received, any erors oocured while Tx/Rx packets, etc.  
+# Switching 
+
+The command `ifcongig` or `ip addr` is used to display all the networking interface configured on any Linux system. This command details both IPV4 and IPV6 IP address, all the details of the packets transmitted and received, any erors oocured while Tx/Rx packets, etc.  
 
 ```bash
 ✗ ifconfig
@@ -32,4 +34,35 @@ eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX packets 16530  bytes 5254064 (5.2 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
         device interrupt 20  memory 0xf7c00000-f7c20000
+```
+As you can see from above, our current IP address is assigned to 192.168.1.5 and we can further add IP addresses uptp 192.168.1.254, leaving 192.168.1.255 as its a reserved address dedicated as **Broadcast IP**
+To add another host tothe same network we use ip addr add `ip addr add 192.168.1.6/24 dev eno1` here, `dev` in the command is the device to which we are assigning this IP to which is `eno1`.
+# Routing
+In the above scenario, we estaclished a connection with another computer from our own host network, lets call it **SYSTEM-A**. Now, when we need to connect to a system out side our host network we use a concept called **Routing**. A Router helps connects two networks. Think of it as a intelligent device with many network ports. AS in our scenario we are trying to connect to another network with an IP address of `192.168.2.10` lets it **SYSTEM-B** , the Router gets assigned with two IP addresses: one `192.168.1.1` for our host network to connect the router and the second `192.168.2.1` assigned for an outside network to connect to the same Router to enable communication between them. When any host from SYSTEM _A tries to connect to SYSTEM-B, how does it know to connect to that Router? there might be many such Routers in the network. That is where the concept of **GATEWAY** comes in to play. To check the existing Routing configurations on a system run the `route` command.
+
+```bash
+✗ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.1.1     0.0.0.0         UG    100    0        0 eno1
+```
+AS you can see, the systems default GAteway is set to `192.168.1.1`. This implies all the traffic from SYSTEM-A will flow through this Gateway. Similarly, if any host from SYSTEM-B wants to connect to SYSTEM-A. We need to add the Routing information in that host. This can be acheived by applying the following command in SYSTEM-B's host:
+
+`ip route add 192.168.2.5/24 via 192.168.2.1`. Remember to add teh Routing tables in all the systems of an internal network. Now, how is our system going to connect to the Internet? Notice the **Default** in the Destination column of the above Routing table. This tells our system to route all the traffic outside our network from the IP address set to this i.e `192.168.1.1`. 
+
+*ps: In some Linux machines, you might see `0.0.0.0` instead of `Default`. Its one and the same.**
+
+In any of the Linux system, whenever there are two interfaces connected to their respective networks. The Linux kernel, fro security reasons does't forward packets from one interface to the other (for example, from `en01` to `eno2`). If we explictly need to forward packets from differnt interfaces within our system, we need to define this setting in `/proc/sys/net/ipv4/ip_forword` file:
+```bash
+✗ cat /proc/sys/net/ipv4/ip_forward
+  0
+```
+By default the configuration for **IP forwarding** is set to zero, to enable IP forwarding set its value to 2 using this command:
+` echo 1 > /proc/sys/net/ipv4/ip_forward` to persist this setting across reboots, we also need to chage this setting in `/etc/sysctl.conf` by modifing the following entry:
+
+** This setting might compromise your security. Enable this if you need packet forwarding from one interface to another**
+
+```bash
+# Uncomment the next line to enable packet forwarding for IPv4
+net.ipv4.ip_forward=1
 ```
