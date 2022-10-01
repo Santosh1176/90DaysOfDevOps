@@ -1,0 +1,35 @@
+## Linux Networking
+
+The command `ifcongig` is used to display all the networking interface configured on any Linux system. This command details both IPV4 and IPV6 IP address, all the details of the packets transmitted and received, any erors oocured while Tx/Rx packets, etc.  
+
+```bash
+✗ ifconfig
+br-4d351f0a6297: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        inet6 fe80::42:32ff:fe97:d00b  prefixlen 64  scopeid 0x20<link>
+        inet6 fc00:f853:ccd:e793::1  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::1  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:32:97:d0:0b  txqueuelen 0  (Ethernet)
+        RX packets 103  bytes 6524 (6.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 148  bytes 22878 (22.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:dc:77:b2:91  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::3c80:351f:9cb6:af13  prefixlen 64  scopeid 0x20<link>
+        ether a0:48:1c:98:52:72  txqueuelen 1000  (Ethernet)
+        RX packets 18889  bytes 11823140 (11.8 MB)
+        RX errors 0  dropped 257  overruns 0  frame 0
+        TX packets 16530  bytes 5254064 (5.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf7c00000-f7c20000
+```

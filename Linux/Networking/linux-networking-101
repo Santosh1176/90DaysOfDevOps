@@ -1,0 +1,41 @@
+# Linux Neyworking 101
+
+With Computers talking to each other over a vast infrastructure of cables and airwaves. In this chapter, I am exploring how this is accomplished, but with a prespective of a Linux user.
+
+Every Linux box needs an interface to connect to other hardware systems. On most of the hardwares, this interface is defined by TCP/IP through which the hardware is accessed. TCP/IP offers a set of operations which basically deals with sending and receiving packets.
+
+On Linux such interface is termed as `eth0`, `eith1`, for people who have docker installed on their Linus system might have also seen `docker0`. These datails can be assessd on any Linux system by passing `ifconfig` on your command prompt. The output would be similar to:
+
+```bash
+✗ ifconfig
+br-4d351f0a6297: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        inet6 fe80::42:32ff:fe97:d00b  prefixlen 64  scopeid 0x20<link>
+        inet6 fc00:f853:ccd:e793::1  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::1  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:32:97:d0:0b  txqueuelen 0  (Ethernet)
+        RX packets 103  bytes 6524 (6.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 148  bytes 22878 (22.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:dc:77:b2:91  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::3c80:351f:9cb6:af13  prefixlen 64  scopeid 0x20<link>
+        ether a0:48:1c:98:52:72  txqueuelen 1000  (Ethernet)
+        RX packets 18889  bytes 11823140 (11.8 MB)
+        RX errors 0  dropped 257  overruns 0  frame 0
+        TX packets 16530  bytes 5254064 (5.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf7c00000-f7c20000
+```
+
+for your Linux machine to connect with the rest of the world this interface needs to be provided an IP address. In the above snippet, you can see, an ip address of `192.168.1.5` is assigned to an interfce `eno1`. which is an interface, my hardware would use to connect to the outside world. 
