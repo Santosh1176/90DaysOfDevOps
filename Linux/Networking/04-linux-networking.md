@@ -85,3 +85,9 @@ This process is known as Name resolution.
 
 
 # Network Namespace on Linux
+
+
+# Resources:
+
+- [Linux IP command cheatsheet by Redhat](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf)
+- [Container Networking Is Simple!](https://iximiuz.com/en/posts/container-networking-is-simple/) by [Ivan Velichko](https://twitter.com/iximiuz)
