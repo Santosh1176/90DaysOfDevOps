@@ -31,7 +31,8 @@ data:
     color.bad=yellow
     allow.textmode=true
 ```
-ConfigMap like secret doest not contain `.spec` field, insted it contains `data` field to store the configuration data.
+*ConfigMap like secret doest not contain `.spec` field, insted it contains `data` field to store the configuration data.*
+
 
 ## Creating configMap from a file:
 A ConfigMap can be created from an individual file or from multiple files in any plaintext format using the kubectl create configmap.

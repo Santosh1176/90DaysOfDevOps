@@ -1,0 +1,15 @@
+# Service in Kubernets
+
+
+# Shortfalls of Service
+
+# Ingress Controllers as remedy 
+
+# confogMaps for stroing various Ingress controller required config data.
+
+
+# Service is still the main interface
+
+# Service Resources
+
+# Ingress Rules for Routing
