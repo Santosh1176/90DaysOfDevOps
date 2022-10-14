@@ -22,11 +22,11 @@ In the NETWORKING section, we discussed each pod needs an IP address, a bridge, 
 
 
 
-However, we would rarely want a Pod to communicate with another pod directly. Instead, we would always use a concept called **Service** for inter pods communication within a Node. As discussed above the Kubernetes requirements with Pods, Pods running in one moment in time could be different from the set of Pods running that application a moment later. Thus, a concept called **Service** is employed, which is an abstraction and a policy by which to access them. A Services provide discovery and routing between pods.
+However, we would rarely want a Pod to communicate with another pod directly. Instead, we would always use a concept called **Service** for inter pods communication within a Node. As discussed above the Kubernetes requirements with Pods running in one moment in time could be different from the set of Pods running that application a moment later. Thus, a concept called **Service** is employed, which is an abstraction and a policy by which to access them. A Services provide discovery and routing between pods.
 
 
 
-One of the Configurations of a Service is a Cluster-wide accessible entity, Known as **CLUSTER IP**. This Type of Service suites well for enabling the communication between pods within the Cluster.
+One of the Configurations of a Service is a Cluster-wide accessible entity, Known as **CLUSTER IP**. This Type of Service suites well for enabling the communication between pods within the Cluster, irrespective of the pods placed in any node inside the cluster.
 
 
 
@@ -62,7 +62,7 @@ Some common ways of routing the traffic are based on `Userspacfe` where `Kube-pr
 
 ## Creating a Service
 A Service in Kubernetes is a REST object, similar to a Pod. Like all of the REST objects.
-An example of creating a service using a definition file is as follows:
+An example of creating a service using a definition file for a set of Pods where each listens on TCP port `9376`:
 
 ```yaml
 apiVersion: v1
@@ -77,6 +77,8 @@ spec:
       port: 80   # Port on which the Service listens to.
       targetPort: 9376   # Redirects the traffic to the TargetPort of the Pod
 ```
+> Note: A Service can map any incoming port to a targetPort. By default and for convenience, the targetPort is set to the same value as the port field.
+
 
 Port definitions in Pods have names, and you can reference these names in the targetPort attribute of a Service. For example, we can bind the targetPort of the Service to the Pod port in the following way:
 ```yaml
@@ -119,26 +121,3 @@ spec:
 
 
 
-# Shortfalls of Service
-
-
-
-# Ingress Controllers as a remedy 
-
-
-
-# confogMaps for storing various Ingress controller-required config data.
-
-
-
-
-
-# Service is still the main interface
-
-
-
-# Service Resources
-
-
-
-# Ingress Rules for Routing
