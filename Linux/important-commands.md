@@ -7,3 +7,11 @@ We can liik for the shortest possible description of what a command does by pass
 santosh@~*$:man -f ls
 ls (1)               - list directory contents
 ``` 
+So, lets start with the basic obe `ls` as we've seen above it *lists all the contents in the current working directory.*
+
+`ls <path name` lists the content of the specified directory.
+```bash
+santosh@~*$:ls ~/west
+emoji.yml  kustomization.yml  kustomize  ns.yml  vote-bot.yml  voting.yml  web.yml
+```      
+
