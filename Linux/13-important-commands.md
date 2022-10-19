@@ -114,7 +114,13 @@ In numerical representation, we have these options:
 
 `lsof -u <username>`
 
-# Networking Commands
+# AWK
+
+`awk` awk is a scripting language which is an abbriviation for its authors Aho, Weinberger, Kernighan. When using awk, you are able to select data – one or more pieces of individual text – based on a pattern you provide. Its a powerful command to chose for a specific of data from a text file which is a table pattern. You can read more about the [comand here](https://www.freecodecamp.org/news/the-linux-awk-command-linux-and-unix-usage-syntax-examples/).
+
+Basic syntax
+`awk '{action}' your_file_name.txt`
+
 
 ## Ifcongif
 
