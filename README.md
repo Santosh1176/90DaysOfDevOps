@@ -14,4 +14,5 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 
 ## Linux
 
-- [Important COmmands in Linux](./Linux/13-important-commands.md)
+- [Important Commands in Linux](./Linux/13-important-commands.md)
+- [Exploring Linux Filesystem](./Linux/14-linux-filesystem.md)
