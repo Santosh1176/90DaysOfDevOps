@@ -43,7 +43,7 @@ The above commands produces a high level (ist Level) tree structure of the `root
 Lets discuss the directories listed above:
 
 - `/bin`
-/bin is the directory that contains binaries, that is, some of the applications and programs you can run.
+/bin is the directory that contains binaries, that is, some of the applications and programs you can run. Almost all basic Linux commands can be found here such ls, cat, touch, pwd, rm, echo, … The binaries on this directory must be available in order to attain minimal functionality for the purposes of booting and repairing a system.
 
 - `/boot`
 Contains the Linux kernel, initial RAM disk image (for drivers needed at boot time), and the boot loader. Interesting files include /boot/
