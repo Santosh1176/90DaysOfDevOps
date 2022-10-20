@@ -121,6 +121,18 @@ In numerical representation, we have these options:
 Basic syntax
 `awk '{action}' your_file_name.txt`
 
+The result is in a tabular form with rich information about the processes running.
+- PID – the unique process ID
+- TTY – terminal type that the user is logged into 
+- TIME – amount of CPU in minutes and seconds that the process has been running 
+- CMD – name of the command that launched the process. 
+- TIME — Time consumed by the accumulated CPU utilization
+
+# PS
+ Linux peovides cababilites for multi-user to work and allows multiple processes simultaneously on a same machine, but in an isolated enviornment. `ps` short for *Process Status*, command provides the ability to inspect the processes running in the system. 
+
+ Basic syntax:
+ `ps <OPTION>`
 
 ## Ifcongif
 
