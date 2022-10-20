@@ -8,3 +8,10 @@ I intend to write a blog each day about the topic I learned and plan to publish 
 This repository will cover all the topics related to DevOps, But, I may skim over many topics with which I am familiar with and could not record the same in this repository. Also, I may not be learning all the areas covered in this vast DevOps landscape and shall be focusing on the topics which will benefit me in my learning and understanding and could help me in getting into this profession.  
 
 
+---
+
+# Journey of my 90 Days
+
+## Linux
+
+- [Important COmmands in Linux](./Linux/13-important-commands.md)
