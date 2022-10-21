@@ -68,3 +68,6 @@ RESULT: 40 is even
 ```
 
 We shall continue this journey of learning Shell Script together tomorrow with more Flow Control like Loops with While and Untill. 
+
+# Resources
+- [THE IMPORTANCE OF SHELL SCRIPTING IN DEVOPS](https://medium.com/@sophieshittu61/the-importance-of-shell-scripting-in-devops-563bcacc4118)
