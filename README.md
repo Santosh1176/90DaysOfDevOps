@@ -18,3 +18,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Exploring Linux Filesystem](./Linux/14-linux-filesystem.md)
 - [Basic Linux Networking](./Linux/Networking/04-linux-networking.md)
 - [Introduction to Bash Scripting](./Linux/15-bash-scripting.md)
+- [Loops in Shell Scripts](./Linux/15-bash-scripting.md)
