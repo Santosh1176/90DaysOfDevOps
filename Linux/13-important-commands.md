@@ -134,6 +134,14 @@ The result is in a tabular form with rich information about the processes runnin
  Basic syntax:
  `ps <OPTION>`
 
+
+## Uniq
+
+`usniq` command takes an input as a Sorted-file and or an input from Standard input and removes any duplicates and prints the result to stdout. It is often used in conjunction with `sort` command to clean the output of duplicates.
+
+> Note: Even `sort` supports a `-u` option, which removes duplicates from the sorted output.
+
+Basic syntax for `uniq` `uniq foo.txt` the same result can be obtained with `sort` command with `sort -u foo.txt`, where `foo.txt` is a file containing sorted entries.
 ## Ifcongif
 
 The `ifconfig` — *Interface Config* command is used for displaying current network configuration information, setting up an ip address, netmask, or broadcast address to a network interface, creating an alias for the network interface, setting up hardware address, and enable or disable network interfaces. This command can be used to activate or deactivate a specified Network Interface. This can be achived by using `up` or `down` down.
