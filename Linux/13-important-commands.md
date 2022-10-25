@@ -134,6 +134,8 @@ The result is in a tabular form with rich information about the processes runnin
  Basic syntax:
  `ps <OPTION>`
 
+You can also see all the processes in a tree like structure by using `pstree` command. 
+
 
 ## Uniq
 

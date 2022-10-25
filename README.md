@@ -13,6 +13,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 # Journey of my 90 Days
 
 ## Linux
+### [Automation Examples used in DevOps](https://github.com/codeaprendiz/learn-devops/tree/main/home/programming-languages/shell)
 - [Linux Networking](./Linux/Networking/04-linux-networking.md)
 - [Important Commands in Linux](./Linux/13-important-commands.md)
 - [Exploring Linux Filesystem](./Linux/14-linux-filesystem.md)
@@ -20,7 +21,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Introduction to Bash Scripting](./Linux/15-bash-scripting.md)
 - [Loops in Shell Scripts](./Linux/15-bash-scripting.md)
 - [Variables in Shell](./Linux/16-variables.md)
-
+- [Working with Text Editors — VIM](./Linux/17-vim.md)
 ## Containers — Docker
 - [Container Storage](./Containers/Docker/05-container-storage.md)
 
