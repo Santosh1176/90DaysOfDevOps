@@ -18,6 +18,9 @@ We can customize our vim for mode productive workflow. as a start we would start
 
 ![Vim Configurations](../images/vim-config.png)
 
+> Note: The comments in above image are for informative purpose. in-line useage of `#` in Vim is **not treated as comment**.
+comments should be written in a saperate line starting with `#`. 
+
 Though the above settings are minimal and Vim is a very extensible tool. We can modify the behavior of our editor to suit our needs.
 
 
