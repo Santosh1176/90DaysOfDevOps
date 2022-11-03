@@ -14,7 +14,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 
 ## Linux
 ### [Automation Examples used in DevOps](https://github.com/codeaprendiz/learn-devops/tree/main/home/programming-languages/shell)
-- [x]:linux:[Linux Networking](./Linux/Networking/04-linux-networking.md)
+- [Linux Networking](./Linux/Networking/04-linux-networking.md)
 - [Important Commands in Linux](./Linux/13-important-commands.md)
 - [Exploring Linux Filesystem](./Linux/14-linux-filesystem.md)
 - [Basic Linux Networking](./Linux/Networking/04-linux-networking.md)
