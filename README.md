@@ -23,8 +23,9 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Variables in Shell](./Linux/16-variables.md)
 - [Working with Text Editors — VIM](./Linux/17-vim.md)
 ## Containers — Docker
-- [Introduction to Containers](./Containers/Docker/18-containers.md)
-- [Container Storage](./Containers/Docker/05-container-storage.md)
+- [x] :whale: [Introduction to Containers](./Containers/Docker/18-containers.md)
+- [x] :whale: [Building Images and Containers](./Containers/Docker/19-building-containers.md)
+- [x] :whale: [Container Storage](./Containers/Docker/05-container-storage.md)
 
 ## Kubernetes
 - [Pod Lifecycle and Probes](./Kubernetes/07-lifecycle-and-probes.md)
