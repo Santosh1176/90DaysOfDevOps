@@ -25,6 +25,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 ## Containers — Docker
 - [x] :whale: [Introduction to Containers](./Containers/Docker/18-containers.md)
 - [x] :whale: [Building Images and Containers](./Containers/Docker/19-building-containers.md)
+- [x] :whale: [Intro to Advanced Build concepts](./Containers/Docker/20-advanced-builds.md)
 - [x] :whale: [Container Storage](./Containers/Docker/05-container-storage.md)
 
 ## Kubernetes
