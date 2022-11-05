@@ -1,8 +1,8 @@
 # Advanced Builds in Docker
 
-Docker around its `19.x` release updated its current *Builder* with the new image buiilder known as [**Buildkit**](https://github.com/moby/buildkit). The oifficial definition of the Builkit is outlined as **BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner.**
+Docker around its `19.x` release updated its current *Builder* with the new image builder known as [**Buildkit**](https://github.com/moby/buildkit). The official definition of the Builkit is outlined as **BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive, and repeatable manner.**
 
-Buildkit provides much needed features for building Docker images like, Faster Build time by leveraging efficient caching mechanism and by parallelizing building independent build stages, Building Multi-Architechure builds, etc. Thus improving the current experience in performance, storage management, and extensibility.
+Buildkit provides much-needed features for building Docker images like Faster Build time by leveraging efficient caching mechanisms and by parallelizing building independent build stages, Building Multi-Architecture builds, etc. Thus improving the current experience in performance, storage management, and extensibility.
 
 The above features can be accessed on a locally installed Docker setup is by using the command `buildx`
 
@@ -36,7 +36,7 @@ Commands:
 
 Run 'docker buildx COMMAND --help' for more information on a command.
 ```
-One of the command used with `buildx` is the regular `build` command. Docker `buildx` is a Docker Plugin which extends the existing Docker `build` command, which provides some new features provided by the Buildkit mechanism. `buildx` executes all the processes in Parallel making the whole build process much faster.
+One of the commands used with `buildx` is the regular `build` command. Docker `buildx` is a Docker Plugin that extends the existing Docker `build` command, which provides some new features provided by the Buildkit mechanism. `buildx` executes all the processes in Parallel making the whole build process much faster.
 
 ```bash
  santosh@figlet*$:docker buildx build -t santoshdts/figlet2 .
@@ -52,13 +52,13 @@ WARNING: No output specified with docker-container driver. Build result will onl
  => CACHED [2/3] RUN apk update && apk update                                                                                      0.0s
  => CACHED [3/3] RUN apk add figlet
  ```
- As you can see, the whole build process was completed in 2.0 seconds (**Building 2.0s (6/6) FINISHED**), Apart from this, we can even push the build artefact directly to our registery (If the Build process was succussful) if we append the command with `--push` flag.
+ As you can see, the whole build process was completed in 2.0 seconds (**Building 2.0s (6/6) FINISHED**), Apart from this, we can even push the build artifact directly to our registery (If the Build process was successful) if we append the command with `--push` flag.
 
- Another feature of Buildx is building an image for multiple architecures. For the above example we didn't specify any perticular paltform and it was built for `linux/amd64`
+ Another feature of Buildx is building an image for multiple architectures. For the above example, we didn't specify any particular platform and it was built for `Linux/amd64`
 
 ![Figlet ARM-64](../../images/figlet-amd64.png)
 
-Now, if we build another image from the same Dockerfile, tag it and add the `--platform linux/amd64,linux/arm64` flags and push it to the repository. We would see two different images built witha single command.
+Now, if we build another image from the same Dockerfile, tag it and add the `--platform Linux/amd64,Linux/arm64` flags and push it to the repository. We would see two different images built witha single command.
 
 ```bash
 santosh@figlet*$:docker buildx build -t santoshdts/figlet2:multiarch --platform linux/amd64,linux/arm64 . --push
@@ -98,11 +98,11 @@ santosh@figlet*$:docker buildx build -t santoshdts/figlet2:multiarch --platform 
 
 ## Buildx Bake
 
-Baked builds are a high-level feature that can be used to define automated build pipelines. They lets you produce multiple images from a single build operation.
+Baked builds are high-level features that can be used to define automated build pipelines. They let you produce multiple images from a single build operation.
 
 BuildKit supports high-level build concepts that go beyond invoking a single build command enabling efficient handles of multiple concurrent build requests and de-duplicating work. The build commands can be combined with general-purpose command runners (for example, `make`). However, these tools generally invoke builds in sequence and therefore cannot leverage the full potential of BuildKit parallelization, or combine BuildKit's output for the user. For this use case, we use a command called `docker buildx bake`.
 
-The `bake` command supports building images from HCL, JSON and Compose files. This is similar to `docker compose build`, but allowing all the services to be built concurrently as part of a *single request*. If multiple files are specified they are all read and configurations are combined.
+The `bake` command supports building images from HCL, JSON, and Compose files. This is similar to `docker-compose build`, but allows all the services to be built concurrently as part of a *single request*. If multiple files are specified they are all read and configurations are combined.
 
 
 
