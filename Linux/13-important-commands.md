@@ -107,6 +107,11 @@ In numerical representation, we have these options:
 - “1” represents “execute permission”.
 - “2” represents “write permission”.
 - “4” represents “read permission”.
+# CHGRP
+
+`chgrp` is just like `chown` where you can set the owner access permissions. `chgrp` is used to set the Group access permissions of a file or a directory.
+
+Basic syntax: `chgrp <group name> <file or directory name>`
 
 # LSOF
 
