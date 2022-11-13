@@ -36,3 +36,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Kubernetes Ingress](./Kubernetes/10-ingress.md)
 - [TLS Authentication in Kubernetes](./Kubernetes/11-tls-authentication.md)
 - [Authorization in Kubernetes](./Kubernetes/12-authorization.md)
+- [Overview of Yaml and JSONPATH](./Kubernetes/22-yaml-jsonpath.md)

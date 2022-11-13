@@ -15,7 +15,18 @@ Lets start with one of most important commands we will use in our journey would 
 
 ![Grep command](../images/grep.png)
 
-As we can see it outputs all the matches of the keyword **command** in the file **important-commands.md**. We can also pass a `-w` flag to search for the line containing the exact matching word.
+As we can see it outputs all the matches of the keyword **command** in the file **important-commands.md**. We can also pass a `-w` flag to search for the line containing the exact matching word. 
+
+## XARGS
+
+`xargs` is a Unix command which can be used to build and execute commands from standard input. Some commands like `grep` can accept input as *parameters*, but some commands accepts *arguments*, this is place where `xargs` came into picture.
+
+Basic syntax:
+`xargs [options] [command]`
+
+This is a very useful command while using with say Kubernetes, we can range ove the pods in a specific namespace and pass that to `xargs` and provide a new command to find logs of those pods. Something similar to:
+
+`kubectl get pods -n kube-system -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' | xargs -I {} kubectl -n kube-system logs {}`
 
 ## Tail
 `tail`command as the name implies, the tail command is used to display the last values of the content of the file. By default, the last 10 lines are selected.
@@ -199,3 +210,4 @@ Basic syntax is `iptables --table TABLE -A/-C/-D... CHAIN rule --jump Target`
 
 # Resources:
 - [Linux commands in DevOps](https://www.edureka.co/blog/linux-commands-in-devops/#linuxcommands)
+- [The most important Linux commands that nobody teaches you. "Best of Medium" Article](https://medium.com/@joelbelton/the-most-important-linux-commands-that-nobody-teaches-you-ce423ef2ae28)
