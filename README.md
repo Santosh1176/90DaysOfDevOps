@@ -28,6 +28,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [x] :whale: [Intro to Advanced Build concepts](./Containers/Docker/20-advanced-builds.md)
 - [x] :whale: [Container Storage](./Containers/Docker/05-container-storage.md)
 - [x] :whale: [Container Networking](./Containers/Docker/21-container-networking.md)
+- [x] :whale: [Multi-stage builds in Docker](./Containers/Docker/23-multi-stage-builds.md)
 ## Kubernetes
 - [Pod Lifecycle and Probes](./Kubernetes/07-lifecycle-and-probes.md)
 - [Volumes in Kubernetes](./Kubernetes/Volumes/06-kubernetes-volumes.md)
