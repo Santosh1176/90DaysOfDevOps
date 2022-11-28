@@ -38,3 +38,6 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [TLS Authentication in Kubernetes](./Kubernetes/11-tls-authentication.md)
 - [Authorization in Kubernetes](./Kubernetes/12-authorization.md)
 - [Overview of Yaml and JSONPATH](./Kubernetes/22-yaml-jsonpath.md)
+
+## Infrastructure as Code — IaC
+- [Intro to Infrastructure as Code](./Infra-as-Code/24-iac.md)
