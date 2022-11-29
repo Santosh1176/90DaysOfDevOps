@@ -41,3 +41,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 
 ## Infrastructure as Code — IaC
 - [Intro to Infrastructure as Code](./Infra-as-Code/24-iac.md)
+- [Hello World with Terraform](./Infra-as-Code/25-terraform.md)
