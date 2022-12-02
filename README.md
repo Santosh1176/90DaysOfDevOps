@@ -43,3 +43,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Intro to Infrastructure as Code](./Infra-as-Code/24-iac.md)
 - [Hello World with Terraform](./Infra-as-Code/25-terraform.md)
 - [A simple Web Server with Terraform](./Infra-as-Code/26-web-server.md)
+- [Variables in Terraform](./Infra-as-Code/27-tf-variables.md)
