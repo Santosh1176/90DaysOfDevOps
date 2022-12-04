@@ -42,15 +42,19 @@ We can also support a workflow to isolate different environments while working w
 
 First, we need to create an Amazon S3 bucket in our `main.tf` file.
 
-![Creating an S3 Bucket and Backend](./images/S3-bucket.png)
+![Creating an S3 Bucket](./images/S3-bucket.png)
 
 In the above code snippet, we need to assure that the *bucket name* is globally unique among all AWS customers. As you can see we've set the `prevent_destroy` parameter to `true`. This assures that the *bucket* resource does not get deleted accidentally. Any attempt to delete that resource (e.g., by running terraform destroy) will cause Terraform to exit with an error.
 
 The `aws_s3_bucket_versioning` resource is set to `true`, this ensures every update to a file in the bucket creates a new version of that file. Next, we set up the encryption on the state files stored on the AWS S3 bucket. For this we set the `aws_s3_bucket_server_side_encryption_configuration` resource with `sse_algorithm` as `AES256`. As our state files may contain some sensitive data like passwords, etc we need to configure the access to the state file stored on the S3 bucket. For this, we use the `aws_s3_bucket_public_access_block`. In our code, we block all public access to the bucket.
 
-On line 71 we have configured the DynamoDB table. To use DynamoDB for *locking* the state file with Terraform, you must create a DynamoDB table that has a primary key called **LockID** using the `aws_dynamodb_table` resource.
+To use DynamoDB for *locking* the state file with Terraform, you must create a DynamoDB table that has a primary key called **LockID** using the `aws_dynamodb_table` resource.
 Once, we have created all the configurations for creating the Amazon S3 bucket and a DynamoDB table. We need to tell Terraform to use this configuration and enable encrypting and storing the Terraform state file on the AWS S3 bucket. We need to define the remote backend as defined on lines 81 to 89. One thing to note here the the `key` property on the backend. We need to provide the path for storing our `terraform.tfstate` file on the S3 bucket. In our example I have provided it with *santoshdts/terraform.tfstate*.
 
+
+Once the S3 and DynamoDB tables are configured appropriately. We can create an `backend.tf` telling Terraform that our default backent for storing the statefile is AWS S3 and will be using the DynamoDB for locking. 
+
+![Backen](./images/backend.png)
 
 
 # resources:
