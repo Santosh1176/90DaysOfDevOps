@@ -44,3 +44,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Hello World with Terraform](./Infra-as-Code/25-terraform.md)
 - [A simple Web Server with Terraform](./Infra-as-Code/26-web-server.md)
 - [Variables in Terraform](./Infra-as-Code/27-tf-variables.md)
+- [What is Terraform state and Remote Backends](./Infra-as-Code/28-tf-state.md)
