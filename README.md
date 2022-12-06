@@ -45,3 +45,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [A simple Web Server with Terraform](./Infra-as-Code/26-web-server.md)
 - [Variables in Terraform](./Infra-as-Code/27-tf-variables.md)
 - [What is Terraform state and Remote Backends](./Infra-as-Code/28-tf-state.md)
+- [Introduction to Ansible](./Infra-as-Code/30-intro-ansible)
