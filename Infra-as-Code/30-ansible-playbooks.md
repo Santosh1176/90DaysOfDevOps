@@ -1,4 +1,4 @@
-# httpd web server using Ansible Playbook
+# Installing Apache web server using Ansible Playbook
 
 In this session, we shall install the `httpd` package on our server running on *Centos-7*. This is just an example showing how we can leverage Ansible to configure our servers whether on the cloud or on-prem.
 
