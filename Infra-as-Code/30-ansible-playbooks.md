@@ -12,7 +12,7 @@ We need a way to tell Ansible which servers we want to work on. This is done by 
 
 ![Ansible hosts file](./images/Ansible-host.png)
 
-> For production uses cases, we have a defined set of servers. The hosts file is located in /etc/ansible/hosts
+> For production uses cases, where we have a defined set of servers the hosts file is located in `/etc/ansible/hosts`.
 In this file, we define all the servers we like to configure using Ansible.
 
 As you can see we have grouped them according to their functionality. Grouping of servers is achieved by enclosing the name of the group - **[app]** and **[db]** in square brackets. Just below our groups, we can declare our servers. I have provided their respective IP addresses. We can also give these servers their hostnames.
