@@ -2,7 +2,7 @@
 
 In this session, we shall install the `httpd` package on our server running on *Centos-7*. This is just an example showing how we can leverage Ansible to configure our servers whether on the cloud or on-prem.
 
-I have spun up three servers for this task, all running on Centos-7 using Vagrant, the Vagrantfile used for the same can be found here.
+I have spun up three servers for this task, all running on Centos-7 using Vagrant, the Vagrantfile used for the same can be found [here](./Vagrantfile).
 
 The servers have been configured with the IP addresses and hostnames for access by the Ansible tool:
 
