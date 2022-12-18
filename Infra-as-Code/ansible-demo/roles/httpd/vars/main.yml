@@ -1,0 +1,4 @@
+---
+# vars file for role/httpd
+welcome_msg: "Welcome to #90DaysOFDevOps"
+day: 32

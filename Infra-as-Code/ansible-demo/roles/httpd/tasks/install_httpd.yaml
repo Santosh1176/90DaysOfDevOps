@@ -1,0 +1,13 @@
+
+
+  - name: Install Apache package
+    yum:
+      name:
+        - httpd
+
+  - name: Add Apache index.html file
+    template: 
+      src: templates/index.html.j2
+      dest: /var/www/html/index.html
+    notify:
+      - restart httpd  

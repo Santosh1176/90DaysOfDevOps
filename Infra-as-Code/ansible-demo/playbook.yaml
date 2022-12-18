@@ -1,0 +1,11 @@
+- hosts: all
+  become: true 
+
+  tasks: 
+    - name: Install HTTPD Package
+      command: yum install httpd -y
+      
+
+    - name: Start Apache and run it on Boot
+      command: systemctl start httpd
+    - command: chkconfig httpd on
