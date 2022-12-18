@@ -1,4 +1,4 @@
-# Handelers and Roles in Ansible
+# Handlers and Roles in Ansible
 
 In the [last session](./30-ansible-playbooks.md) we configured our servers by installing httpd package. As time goes on and projects grow, additional playbooks and variable files are added, and task files may be split. To follow the best practice by way of organizing all the tasks in a more efficient way so we can make playbooks more maintainable, reusable, and powerful. Ansible provides flexible features by providing us the tools necessary to split up tasks more efficiently using **Includes** and **Roles**. In this session, we will build upon the earlier example and use [Ansible Galaxy command](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#galaxy-user-guide) to make use of roles and includes.
 
