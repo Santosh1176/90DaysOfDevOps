@@ -47,3 +47,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [What is Terraform state and Remote Backends](./Infra-as-Code/28-tf-state.md)
 - [Introduction to Ansible](./Infra-as-Code/29-ansible.md)
 - [Ansible Playbooks](./Infra-as-Code/30-ansible-playbooks.md)
+- [Roles and Handlers in Ansible](./Infra-as-Code/31-handelers-roles.md)
