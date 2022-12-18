@@ -2,6 +2,8 @@
 
 In the [last session](./30-ansible-playbooks.md) we configured our servers by installing httpd package. As time goes on and projects grow, additional playbooks and variable files are added, and task files may be split. To follow the best practice by way of organizing all the tasks in a more efficient way so we can make playbooks more maintainable, reusable, and powerful. Ansible provides flexible features by providing us the tools necessary to split up tasks more efficiently using **Includes** and **Roles**. In this session, we will build upon the earlier example and use [Ansible Galaxy command](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#galaxy-user-guide) to make use of roles and includes.
 
+> All the manifest file for this demo can be [found here](./ansible-demo/)
+
 Before jumping on to Roles, let's check out Handlers in Ansible. Sometimes you want a task to run only when a change is made on a machine. For example, you may want to restart a service if a task updates the configuration of that service, but not if the configuration is unchanged. Ansible uses handlers to address this use case. **Handlers** are tasks that only run when notified.
 
 In the Playbook, I've added another play and some variables and added a template file to our server at `/var/www/html` to display a custom page. I've also added a `notify` property to that task. Here the `notify` keyword instructs the `Add Apache index.html file` task to run the Handlers - `restart httpd` in our case.
