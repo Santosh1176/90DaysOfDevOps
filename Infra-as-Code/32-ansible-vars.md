@@ -25,7 +25,7 @@ While working on projects, we would require to set the value of the variable bas
 - hosts: app
   become: true
   gather_facts: false
-tasks:
+  tasks:
   - name: Get the TimeZone of our servers
     shell: "timedatectl | grep -i zone"
     register: timezone
