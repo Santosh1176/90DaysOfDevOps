@@ -5,15 +5,15 @@ The simplest way to define variables is to put a vars section in your playbook. 
 
 ```yaml
 vars:
-wecome_msg: "Welcome to #90DaysOfDevOps"
-day: 32
+  wecome_msg: "Welcome to #90DaysOfDevOps"
+  day: 32
 ```
 
 Similarly, we can also use a separate variables file by using the `vars_files` keyword in our project. We can declare all the variables in a `yaml` file like so:
 
 ```yaml
 var_files:
-- my_variable_file.yaml
+  - my_variable_file.yaml
 ```
 
 While using **Roles**, we do get a dedicated folder with the name `vars` with a `main.yaml` file, where we can declare all our variables required.
@@ -23,13 +23,13 @@ While working on projects, we would require to set the value of the variable bas
 ```yaml
  - -
 - hosts: app
-become: true
-gather_facts: false
+  become: true
+  gather_facts: false
 tasks:
-- name: Get the TimeZone of our servers
-shell: "timedatectl | grep -i zone"
-register: timezone
-- debug: msg="Time Zones of our server are {{ timezone.stdout }}"
+  - name: Get the TimeZone of our servers
+    shell: "timedatectl | grep -i zone"
+    register: timezone
+  - debug: msg="Time Zones of our server are {{ timezone.stdout }}"
 ```
 
 This Playbook will execute the command to check the time zone of our servers, and save that value in a `timezone` variable using the `register` keyword. Later, we access the variable in the `debug` clause to output the value to `stdout`.
