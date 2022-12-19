@@ -48,3 +48,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Introduction to Ansible](./Infra-as-Code/29-ansible.md)
 - [Ansible Playbooks](./Infra-as-Code/30-ansible-playbooks.md)
 - [Roles and Handlers in Ansible](./Infra-as-Code/31-handelers-roles.md)
+- [Variables and Facts in Ansible](./Infra-as-Code/32-ansible-vars.md)
