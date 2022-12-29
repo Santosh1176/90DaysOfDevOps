@@ -49,3 +49,6 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Ansible Playbooks](./Infra-as-Code/30-ansible-playbooks.md)
 - [Roles and Handlers in Ansible](./Infra-as-Code/31-handelers-roles.md)
 - [Variables and Facts in Ansible](./Infra-as-Code/32-ansible-vars.md)
+
+## CI/CD
+- [An Introduction to CI/CD](./CI-CD/33-ci-cd-intro.md)
