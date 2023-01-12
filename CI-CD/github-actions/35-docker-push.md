@@ -21,6 +21,6 @@ I pushed this code to the repo and the action was run and the image was pushed t
 
 As, you can see we have provided all the credentials and the repository details in the job named **Login to Docker Registry**. We will also ask this job to append the tag with `latest` while pushing to docker hub.
 
-We can confirm that with our docker registry for the new image with `test_action:latest` to be available.
+We can confirm that with our docker registry for the new image with `test_action:latest` to be available. The workflow and the sourcecode for the exercise is [hosted on github](https://github.com/Santosh1176/github_actions_demo)
 
 ![Docker registry](./images/docker-registry.png)
