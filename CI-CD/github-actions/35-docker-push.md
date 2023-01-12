@@ -20,3 +20,7 @@ I pushed this code to the repo and the action was run and the image was pushed t
 ![Docker-hub registry](./images/gh-act-succuss.png)
 
 As, you can see we have provided all the credentials and the repository details in the job named **Login to Docker Registry**. We will also ask this job to append the tag with `latest` while pushing to docker hub.
+
+We can confirm that with our docker registry for the new image with `test_action:latest` to be available.
+
+![Docker registry](./images/docker-registry.png)
