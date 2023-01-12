@@ -53,3 +53,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 ## CI/CD
 - [An Introduction to CI/CD](./CI-CD/33-ci-cd-intro.md)
 - [An Introduction to Github Actions](./CI-CD/github-actions/34-intro-gh-actions.md)
+- [Build and Push to Docker-Hub](./CI-CD/github-actions/35-docker-push.md)
