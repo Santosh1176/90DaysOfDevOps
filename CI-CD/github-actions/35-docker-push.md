@@ -17,6 +17,6 @@ The full action for push to docker-hub is attached below. Now, once we push any 
 
 I pushed this code to the repo and the action was run and the image was pushed to my docker-hub repository. We can see the the new image with the `latest` tag in my registry.
 
-~[Docker-hub registry](./images/gh-act-succuss.png)
+![Docker-hub registry](./images/gh-act-succuss.png)
 
 As, you can see we have provided all the credentials and the repository details in the job named **Login to Docker Registry**. We will also ask this job to append the tag with `latest` while pushing to docker hub.
