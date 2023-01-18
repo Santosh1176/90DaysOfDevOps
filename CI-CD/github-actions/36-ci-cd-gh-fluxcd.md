@@ -22,6 +22,8 @@ When this Action runs, i.e when a commit is pushed to any branch of the reposito
 
 As you can see, I have configured to tag the current push with the *Branch*, *Git-SHA*, and *Timestamp*. and for future usecase, have commentd out the usage of `latest` tag. 
 
+![Action sucuss](../github-actions/images/action-succuss.png)
+
 ![Docker Tag](../github-actions/images/docker-tag.png)
 
 Once the commit is pushed on any branch, the artefact is rightly pushed to Docker Hub as shown in Image.
@@ -30,7 +32,7 @@ This is a part of the workflow, where the Dev/Staging teams can work on based on
 
 The current artifact could be used by the Dev/Staging teams in their Deployment and work on the source code to add new features, eliminate bugs reported, if any, etc. In this scenerio, the latest image is deployed, based on a timestamp. This is an appropriate config for rapid iteration and might be adapted for production.
 
-One of the impediments we could face by making Fluxcd dependent on the build cycle with Github Action us *caching*. Greater time spent waiting for CI/CD can unfortunately have outsized impacts on focus depletion and developer productivity. The answer to this lies in skillfully designing the *Dockerfile*. Arranging your build order so the slow parts that change less frequently are built first, or in a separate staging, means they can be cached and repeated only as often as they change.
+Though this action took merely 23 seconds to complete to ptroduca a artifact of 126Mb is bit concerning in a setting where the Deploy pipeline is working faster than the CI workflow and ultimately make the FLUX wait for CI too toi finish the process. This could be mitigated by leveraging Docker's *caching* mechanism. Greater time spent waiting for CI/CD can unfortunately have outsized impacts on focus depletion and developer productivity. The answer to this lies in skillfully designing the *Dockerfile*. Arranging your build order so the slow parts that change less frequently are built first, or in a separate staging, means they can be cached and repeated only as often as they change.
 
 
 # Resources:
