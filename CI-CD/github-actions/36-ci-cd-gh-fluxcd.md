@@ -16,6 +16,8 @@ First We need to add a Github Action to build an artifact from the code when a n
 
 ![Dev Github Action](../github-actions/images/docker-ver.png)
 
+Note the the `on.push.branches` field on the top of the action. This tells to watch pushes on any branches, which will trigger some steps to build the artifact and tag it with `brach-git_sha-timestamp`. When in the next sessions, we will builtd a workflow for production pipeline, we shall change it to wtach for any `git tags`.
+
 When this Action runs, i.e when a commit is pushed to any branch of the repository. The Build process will build an image with tag combining the `Git Branch Name`, The First 8 digits of `Github SHA`, and the Unix timestamp in seconds. The whole Tag would look something like: `santoshdts/bookstore:main-fa25b2ea-1674061254` when tis action was run and the artefact pushed to Docker Hub.
 
 ![Timestamped tagging](../github-actions/images/docker-ts-tag.png)
@@ -33,6 +35,8 @@ This is a part of the workflow, where the Dev/Staging teams can work on based on
 The current artifact could be used by the Dev/Staging teams in their Deployment and work on the source code to add new features, eliminate bugs reported, if any, etc. In this scenerio, the latest image is deployed, based on a timestamp. This is an appropriate config for rapid iteration and might be adapted for production.
 
 Though this action took merely 23 seconds to complete to ptroduca a artifact of 126Mb is bit concerning in a setting where the Deploy pipeline is working faster than the CI workflow and ultimately make the FLUX wait for CI too toi finish the process. This could be mitigated by leveraging Docker's *caching* mechanism. Greater time spent waiting for CI/CD can unfortunately have outsized impacts on focus depletion and developer productivity. The answer to this lies in skillfully designing the *Dockerfile*. Arranging your build order so the slow parts that change less frequently are built first, or in a separate staging, means they can be cached and repeated only as often as they change.
+
+This is an initial step to get versioned images in our registry. In the next session, we will leverage this Github Action and integrate this with GitOps based Continuous Delivery pipline, which will pull thge latest version based on above tag of the image to our application deployed on the Kubernetes cluster. 
 
 
 # Resources:

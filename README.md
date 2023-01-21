@@ -50,8 +50,9 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Roles and Handlers in Ansible](./Infra-as-Code/31-handelers-roles.md)
 - [Variables and Facts in Ansible](./Infra-as-Code/32-ansible-vars.md)
 
-## CI/CD
+## GitOps and Continuous Integration
 - [An Introduction to CI/CD](./CI-CD/33-ci-cd-intro.md)
 - [An Introduction to Github Actions](./CI-CD/github-actions/34-intro-gh-actions.md)
 - [Build and Push to Docker-Hub](./CI-CD/github-actions/35-docker-push.md)
 - [CI/CD with Github Actions and FluxCD](./CI-CD/github-actions/36-ci-cd-gh-fluxcd.md)
+- [GitOps 101](./CI-CD/GitOps/37-gitops-101.md) 
