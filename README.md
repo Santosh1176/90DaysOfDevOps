@@ -56,3 +56,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Build and Push to Docker-Hub](./CI-CD/github-actions/35-docker-push.md)
 - [CI/CD with Github Actions and FluxCD](./CI-CD/github-actions/36-ci-cd-gh-fluxcd.md)
 - [GitOps 101](./CI-CD/GitOps/37-gitops-101.md) 
+- [GitOps Hands-on with FluxCD and my boostore app](./CI-CD/GitOps/38-Cd%20with-fluxcd.md)
