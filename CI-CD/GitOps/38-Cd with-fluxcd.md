@@ -14,7 +14,7 @@ This is very similar to the Github Action, we worked on in the [earlier session]
 
 ![Script to produce a version](./images/action-ver.png)
 
-This action gets triggered wheenever a commit is pushed to **any branch**. The script you see from line 18 to 30 does is collect the *Branch Name*, *Commit SHA*, and the *Timestamp*. This is used for tagging when the *Docker Build and Push* action is triggered. 
+This action gets triggered wheenever a commit is pushed to **any branch**. The script you see from line 18 to 30 does is collect the *Branch Name*, *Commit SHA*, and the *UNIX Timestamp*. This is used for tagging when the *Docker Build and Push* action is triggered. 
 
 ![Docker Build and Push](./images/docker-build-push.png)
 
@@ -28,7 +28,7 @@ The action was run succussfully and a new tagged image was pushed to DockerHub a
 
 You can see, the image was tageed with `main-94e4d51a-1674303038` as we had configured in the script that ran in our GitHub Action. 
 
-Now, as we are getting a new image with tag correspomding with a timestamp. we can leverege this and use it in our FluxCD configuration.
+Now, as we are getting a new image with tag correspomding with a UNIX timestamp. we can leverege this and use it in our FluxCD configuration.
 
 ## Installing FluxCD
 
@@ -43,7 +43,7 @@ $ flux bootstrap github \
   --personal
   --components-extra=image-automation-controller,image-reflector-controller
   ```
-  It will create a gitrepository by name `gitops-demo`, generate manifests and install various FluxCD components in the Flux-system namespace.
+  It will create a gitrepository by name `gitops-demo`, generate manifests and install various FluxCD components in the Flux-system namespace. The `--components-extra` argument here, will install additional Flux components, `image-automation-controller` and `image-reflector-controller` to our cluster that are required for performing some Image Aupdate and Automation required for our CD workflow.
 
   ```bash
   ► connecting to github.com
@@ -219,7 +219,7 @@ Ther's a special syntax to tell our deployment manifest to watch for the specifi
 The `# {"$imagepolicy": "flux-system:bookstore"}` tag in front of the image file tells the deployment to track a specific *ImagePolicy* reource, here I've configured it to: `flux-system: bookstore` its a combination of `Namespace: ImagePolicy`. More on this patching mechanism is explained [here](https://fluxcd.io/flux/guides/image-update/#configure-image-update-for-custom-resources).
 
 
-With these resources updated in our `gitops-demo` and `bookstore` repo, our deployment manifest should be updated with the lates image tags based on the `timestamp`. But, we need to provide write access to the `gitops-demo` repository to write to our application repository. This can be acheived by generatinga **deploy key** from our management repositoiry. we can generate the key using the `flux` cli. For this we would require a *Flux Secret* which is available at `.spec.secretRef.name` from our GitRepository resource. And, we can generate the secret by:
+With these resources updated in our `gitops-demo` and `bookstore` repo, our deployment manifest should be updated with the lates image tags based on the `UNIX timestamp`. But, we need to provide write access to the `gitops-demo` repository to write to our application repository. This can be acheived by generatinga **deploy key** from our management repositoiry. we can generate the key using the `flux` cli. For this we would require a *Flux Secret* which is available at `.spec.secretRef.name` from our GitRepository resource. And, we can generate the secret by:
 
 ```bash
 flux create secret git \
@@ -251,3 +251,4 @@ With this automation for our Dev/Staging teams is complete, we can move in simil
 # Resources:
 - [Automate image updates to Git](https://fluxcd.io/flux/guides/image-update/)
 - [Flux Bootstrap](https://fluxcd.io/flux/get-started/)
+- [Github-Actions-Demo with Flux by Kingdon BAret](https://github.com/kingdonb/github-actions-demo)
