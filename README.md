@@ -57,3 +57,4 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [CI/CD with Github Actions and FluxCD](./CI-CD/github-actions/36-ci-cd-gh-fluxcd.md)
 - [GitOps 101](./CI-CD/GitOps/37-gitops-101.md) 
 - [GitOps Hands-on with GitHub Action, FluxCD and my Bookstore app](./CI-CD/GitOps/38-Cd%20with-fluxcd.md)
+- [GitOps with Flux](./CI-CD/GitOps/39-gitops-in-action.md)
