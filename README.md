@@ -21,7 +21,10 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Introduction to Bash Scripting](./Linux/15-bash-scripting.md)
 - [Loops in Shell Scripts](./Linux/15-bash-scripting.md)
 - [Variables in Shell](./Linux/16-variables.md)
-- [Working with Text Editors — VIM](./Linux/17-vim.md)
+- [Working with Text Editors — VIM](./Linux/17-vim.md)]
+
+## Git and GitHub
+- [Introduction Git](./version%20control/40-git.md)
 ## Containers — Docker
 - [x] :whale: [Introduction to Containers](./Containers/Docker/18-containers.md)
 - [x] :whale: [Building Images and Containers](./Containers/Docker/19-building-containers.md)
