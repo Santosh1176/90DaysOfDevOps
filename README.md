@@ -24,7 +24,8 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Working with Text Editors — VIM](./Linux/17-vim.md)]
 
 ## Git and GitHub
-- [Introduction Git](./version%20control/40-git.md)
+- [Introduction to Git](./version%20control/40-git.md)
+- [Levereging GitHub for team work](./version%20control/41-github.md)
 ## Containers — Docker
 - [x] :whale: [Introduction to Containers](./Containers/Docker/18-containers.md)
 - [x] :whale: [Building Images and Containers](./Containers/Docker/19-building-containers.md)
@@ -41,6 +42,7 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [TLS Authentication in Kubernetes](./Kubernetes/11-tls-authentication.md)
 - [Authorization in Kubernetes](./Kubernetes/12-authorization.md)
 - [Overview of Yaml and JSONPATH](./Kubernetes/22-yaml-jsonpath.md)
+- [A Cluster with Kubeadm](./Kubernetes/42-kubeadm-cluster.md)
 
 ## Infrastructure as Code — IaC
 - [Intro to Infrastructure as Code](./Infra-as-Code/24-iac.md)
