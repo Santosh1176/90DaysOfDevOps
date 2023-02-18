@@ -43,6 +43,8 @@ This repository will cover all the topics related to DevOps, But, I may skim ove
 - [Authorization in Kubernetes](./Kubernetes/12-authorization.md)
 - [Overview of Yaml and JSONPATH](./Kubernetes/22-yaml-jsonpath.md)
 - [A Cluster with Kubeadm](./Kubernetes/42-kubeadm-cluster.md)
+- [Installing Containerd as CRI for Kubeadm cluster](./Kubernetes/43-containerd-cri.md)
+- [Configuring the Kubeadm cluster and CNI](./Kubernetes/44-configuring-kubeadm-cluster.md)
 
 ## Infrastructure as Code — IaC
 - [Intro to Infrastructure as Code](./Infra-as-Code/24-iac.md)
